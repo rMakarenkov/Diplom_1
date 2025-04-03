@@ -1,9 +1,12 @@
+import pytest
+
 from practicum.bun import Bun
 from practicum.database import Database
 from practicum.ingredient import Ingredient
 from practicum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
 
 
+@pytest.mark.databases
 class TestDatabase:
     def test_initial_database_bun_successfully_initial(self):
         # Arrange

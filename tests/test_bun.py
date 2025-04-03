@@ -3,6 +3,7 @@ import pytest
 from practicum.bun import Bun
 
 
+@pytest.mark.buns
 class TestBun:
     def test_create_bun_successfully_operation(self):
         # Arrange

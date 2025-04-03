@@ -4,6 +4,7 @@ from practicum import ingredient_types as ie
 from practicum.ingredient import Ingredient
 
 
+@pytest.mark.ingredients
 class TestIngredient:
     def test_create_ingredient_successfully_operation(self):
         # Arrange
