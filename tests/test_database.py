@@ -3,7 +3,6 @@ import pytest
 from practicum.bun import Bun
 from practicum.database import Database
 from practicum.ingredient import Ingredient
-from practicum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FILLING
 
 
 @pytest.mark.databases
@@ -27,12 +26,12 @@ class TestDatabase:
     def test_initial_database_ingredient_successfully_initial(self):
         # Arrange
         expected_ingredients_list = [
-            Ingredient(INGREDIENT_TYPE_SAUCE, "hot sauce", 100),
-            Ingredient(INGREDIENT_TYPE_SAUCE, "sour cream", 200),
-            Ingredient(INGREDIENT_TYPE_SAUCE, "chili sauce", 300),
-            Ingredient(INGREDIENT_TYPE_FILLING, "cutlet", 100),
-            Ingredient(INGREDIENT_TYPE_FILLING, "dinosaur", 200),
-            Ingredient(INGREDIENT_TYPE_FILLING, "sausage", 300)
+            Ingredient('SAUCE', "hot sauce", 100.0),
+            Ingredient('SAUCE', "sour cream", 200.0),
+            Ingredient('SAUCE', "chili sauce", 300.0),
+            Ingredient('FILLING', "cutlet", 100.0),
+            Ingredient('FILLING', "dinosaur", 200.0),
+            Ingredient('FILLING', "sausage", 300.0)
         ]
         # Act
         db = Database()

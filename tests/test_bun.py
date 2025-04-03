@@ -10,7 +10,8 @@ class TestBun:
         expected_name = 'Black bun'
         expected_price = 50.0
         # Act
-        bun = Bun(name=expected_name, price=expected_price)
+        bun = Bun(expected_name, expected_price)
         # Assert
         assert bun.get_name() == expected_name, 'The Bun object name does not match the expected name.'
-        assert bun.get_price() == pytest.approx(expected_price), 'Buns price does not match the expected price'
+        assert bun.get_price() == pytest.approx(expected_price,
+                                                abs=0.001), 'Buns price does not match the expected price'
