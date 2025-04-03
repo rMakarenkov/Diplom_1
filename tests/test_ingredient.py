@@ -1,7 +1,7 @@
 import pytest
 
-from practicum.ingredient import Ingredient
 from practicum import ingredient_types as ie
+from practicum.ingredient import Ingredient
 
 
 class TestIngredient:
@@ -15,4 +15,5 @@ class TestIngredient:
         # Assert
         assert ingredient.get_type() == expected_ingredient_type, 'The ingredient type does not match the expected one'
         assert ingredient.get_name() == expected_name, 'The ingredient name does not match the expected one'
-        assert ingredient.get_price() == pytest.approx(expected_price), 'The ingredient price does not match the expected one'
+        assert ingredient.get_price() == pytest.approx(expected_price), ('The ingredient price does not match the '
+                                                                         'expected one')

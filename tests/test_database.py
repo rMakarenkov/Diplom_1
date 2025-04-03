@@ -1,5 +1,3 @@
-import pytest
-
 from practicum.bun import Bun
 from practicum.database import Database
 from practicum.ingredient import Ingredient
