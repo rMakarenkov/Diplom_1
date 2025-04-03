@@ -1,7 +1,6 @@
-from unittest.mock import Mock
-
 import pytest
 
+from unittest.mock import Mock
 from practicum.bun import Bun
 from practicum.burger import Burger
 from practicum.ingredient import Ingredient
