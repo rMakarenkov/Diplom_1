@@ -1,3 +1,5 @@
+from unittest.mock import Mock
+
 import pytest
 
 from practicum.bun import Bun
@@ -56,10 +58,16 @@ class TestBurger:
     def test_get_price_successfully_getted(self):
         # Arrange
         burger = Burger()
-        bun = Bun("black bun", 10.0)
-        ingredient_one = Ingredient('SAUCE', 'hot sauce', 40.0)
+
+        bun = Mock()
+        bun.get_price.return_value = 10.0
+
+        ingredient = Mock()
+        ingredient.get_price.return_value = 40.0
+
         burger.set_buns(bun)
-        burger.add_ingredient(ingredient_one)
+        burger.add_ingredient(ingredient)
+
         expected_price = 60.0
         # Act
         actual_price = burger.get_price()
