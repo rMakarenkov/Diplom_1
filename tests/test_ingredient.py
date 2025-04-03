@@ -1,6 +1,5 @@
 import pytest
 
-from practicum import ingredient_types as ie
 from practicum.ingredient import Ingredient
 
 
@@ -8,7 +7,7 @@ from practicum.ingredient import Ingredient
 class TestIngredient:
     def test_create_ingredient_successfully_operation(self):
         # Arrange
-        expected_ingredient_type = ie.INGREDIENT_TYPE_SAUCE
+        expected_ingredient_type = 'SAUCE'
         expected_name = 'Hot sauce'
         expected_price = 25.0
         # Act
